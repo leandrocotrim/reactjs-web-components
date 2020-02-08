@@ -24,6 +24,8 @@
     }
 ```
 
+## Run
 ` npx live-server --port=9090`
+
 ### Reference
 https://itnext.io/react-and-web-components-3e0fca98a593
