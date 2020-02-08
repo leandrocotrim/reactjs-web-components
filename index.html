@@ -2,12 +2,32 @@
 <html>
   <head></head>
   <body>
-    <new-button 
-      text="Eu sou um WebComponent com ReactJs. Click para aciona um evento externo.">
-    </new-button>
+    <p>
+      <new-button 
+        text="Eu sou um WebComponent com ReactJs. Click para aciona um evento externo.">
+      </new-button>
+    </p>
+    <p>
+      <button onclick="trocarTexto()">Trocar texto do botão ReactJs</button>
+    </p>
+    <p>
+      <button onclick="adicionarProperty()">Adicionar property 'onClick' no botão ReactJs</button>
+    </p>
   </body>
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
   <script src="libs/react-shadow-dom-retarget-events/index.js"></script>
   <script src="src/index.js"></script>
+
+  <script>
+    function trocarTexto() {
+      document.querySelector('new-button')
+        .setAttribute('text', 
+          'Texto do botão ReactJs trocado as ' + new Date().toTimeString());      
+    }
+
+    function adicionarProperty() {
+      document.querySelector('new-button').setProperty('onClick', function(text) { alert(text); });
+    }
+  </script>
 </html>
