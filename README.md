@@ -1,9 +1,9 @@
 # Web Components with ReactJS
 
-## Code of Web Component
+## Web Component Code
 ```html
       <new-button 
-        text="Eu sou um WebComponent com ReactJs. Click para aciona um evento externo.">
+        text="Eu sou um WebComponent com ReactJs. Click para acionar um evento externo.">
       </new-button>
 
       <button onclick="trocarTexto()">Trocar texto do botão ReactJs</button>
@@ -11,12 +11,12 @@
       <button onclick="adicionarProperty()">Adicionar property 'onClick' no botão ReactJs</button>
 ```
 
-## Code for manipulation
+## Manipulation Code
 ```javascript
     function trocarTexto() {
       document.querySelector('new-button')
         .setAttribute('text', 
-          'Texto do botão ReactJs trocado as ' + new Date().toTimeString());      
+          'Texto do botão ReactJs trocado - ' + new Date().toTimeString());      
     }
 
     function adicionarProperty() {
